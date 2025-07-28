@@ -1,5 +1,5 @@
 # foxhole-artillery-calc
-https://earthgrazer.github.io/foxhole-artillery-calc/
+https://acappijr.github.io/foxhole-artillery-calc/
 
 Calculadora de Artilharia para [Foxhole](https://www.foxholegame.com/).
 
