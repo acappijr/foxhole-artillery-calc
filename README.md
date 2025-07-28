@@ -1,10 +1,12 @@
 # foxhole-artillery-calc
 https://earthgrazer.github.io/foxhole-artillery-calc/
 
-Artillery calculator for [Foxhole](https://www.foxholegame.com/).
+Calculadora de Artilharia para [Foxhole](https://www.foxholegame.com/).
 
-In Foxhole, indirect fire weapons like the Howitzer, Mortar, and Field Artillery are aimed by setting the distance and azimuth (angle) to a target. Since the artillery operator has no visual aid to show where those target values land, it is imperative that a spotter be brought along to complete the artillery crew. The spotter role uses binoculars to determine the exact distance and angle to a target from where he stands, and relays this information to the artillery operator to coordinate a strike.
+Em Foxhole, armas de fogo indireto como o Obuseiro, Morteiro e Artilharia de Campanha (Howitzer, Mortar, and Field Artillery) são miradas ajustando a distância e o azimute (ângulo) até o alvo. Como o operador da artilharia não tem uma ajuda visual para mostrar onde esses valores de alvo irão atingir, é fundamental que um observador acompanhe a equipe de artilharia. O papel do observador é usar binóculos para determinar a distância e o ângulo exatos até o alvo a partir de onde ele está, e repassar essas informações ao operador da artilharia para coordenar o disparo.
 
-A challenge that an artillery crew faces is when the spotter cannot call out shots from the same location as the artillery, such is the case with the Howitzer. Binoculars have a maximum range of 120 meters, while the Howitzer can hit up to a maximum of 150 meters. To maximize the Howitzer's range, the spotter must be positioned far in front of it in order to bring a target at max range into view. This change in relative positioning often causes shots to be wildly inaccurate when estimated by eye.
+Um desafio enfrentado por uma equipe de artilharia ocorre quando o observador não pode chamar os disparos a partir da mesma posição da artilharia — como é o caso do Obuseiro (Howitzer). Os binóculos têm um alcance máximo de 120 metros, enquanto o Obuseiro (Howitzer) pode atingir até 150 metros. Para maximizar o alcance do Obuseiro (Howitzer), o observador deve ser posicionado bem à frente dele, a fim de conseguir visualizar um alvo na distância máxima. Essa mudança de posicionamento relativo frequentemente causa disparos extremamente imprecisos quando estimados a olho.
 
-This webapp takes the distance and azimuth values of the artillery and target relative to the spotter, and computes the distance and azimuth values to the target relative to the artillery. **This allows the spotter to accurately call out fire missions without having to be positioned right next to the Howitzer/mortar/artillery**.
+Este aplicativo web utiliza os valores de distância e azimute da artilharia e do alvo em relação ao observador, e calcula os valores de distância e azimute do alvo em relação à artilharia. **Isso permite que o observador chame missões de disparo com precisão, sem precisar estar posicionado ao lado do Obuseiro, Morteiro ou Artilharia (Howitzer/mortar/artillery)**.
+
+Esse é um fork de https://github.com/earthgrazer/foxhole-artillery-calc.
