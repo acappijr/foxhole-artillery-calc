@@ -1,117 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Foxhole Artillery Calculator</title>
+    <title>Calculadora de Artilharia para Foxhole</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
         <section>
-            <h2 style="font-size:20pt">Target</h2>
+            <h2 style="font-size:20pt">Alvo</h2>
             <div class="input-group mb-0">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" style="width:5.5em">Distance</span>
+                    <span class="input-group-text" style="width:5.5em">Distância</span>
                 </div>
-                <input id="input_tar_dist" type="number" class="form-control" tabindex="1" autofocus placeholder="from spotter to target" aria-label="from spotter to target">
+                <input id="input_tar_dist" type="number" class="form-control" tabindex="1" autofocus placeholder="do observador ao alvo" aria-label="do observador ao alvo">
                 <div class="input-group-append">
-                    <span class="input-group-text">meters</span>
+                    <span class="input-group-text">metros</span>
                 </div>
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" style="width:5.5em">Azimuth</span>
+                    <span class="input-group-text" style="width:5.5em">Azimute</span>
                 </div>
-                <input id="input_tar_azim" type="number" class="form-control" tabindex="2" placeholder="from spotter to target" aria-label="from spotter to target">
+                <input id="input_tar_azim" type="number" class="form-control" tabindex="2" placeholder="do observador ao alvo" aria-label="do observador ao alvo">
                 <div class="input-group-append">
-                    <span class="input-group-text">degrees</span>
-                    <button id="btn_swapcourse_tar_azim" class="btn btn-outline-secondary" title="swap backcourse">&#x21c4;</button>
+                    <span class="input-group-text">graus</span>
+                    <button id="btn_swapcourse_tar_azim" class="btn btn-outline-secondary" title="inverter rota">&#x21c4;</button>
                 </div>
             </div>
         </section>
 
         <section>
             <hr/>
-            <button id="btn_add_trp" class="btn btn-secondary btn-sm">+ Add Target Reference Point</button>
-            <button id="btn_del_trp" class="btn btn-outline-danger btn-sm">- remove Target Reference Point</button>
-            <div id="container_additional_trps"><!-- Info: New TRPs stack up here --></div>
+            <button id="btn_add_trp" class="btn btn-secondary btn-sm">+ Adicionar Ponto de Referência do Alvo</button>
+            <button id="btn_del_trp" class="btn btn-outline-danger btn-sm">- remover Ponto de Referência do Alvo</button>
+            <div id="container_additional_trps"></div>
             <hr/>
         </section>
 
         <section>
-            <h2 style="font-size:20pt">Artillery</h2>
+            <h2 style="font-size:20pt">Artilharia</h2>
             <div class="input-group mb-0">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" style="width:5.5em">Distance</span>
+                    <span class="input-group-text" style="width:5.5em">Distância</span>
                 </div>
                 <input id="input_art_dist" type="number" class="form-control" tabindex="100">
                 <div class="input-group-append">
-                    <span class="input-group-text">meters</span>
+                    <span class="input-group-text">metros</span>
                 </div>
             </div>
             <div class="input-group mb-0">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" style="width:5.5em">Azimuth</span>
+                    <span class="input-group-text" style="width:5.5em">Azimute</span>
                 </div>
                 <input id="input_art_azim" type="number" class="form-control" tabindex="101">
                 <div class="input-group-append">
-                    <span class="input-group-text">degrees</span>
-                    <button id="btn_swapcourse_art_azim" class="btn btn-outline-secondary" title="swap backcourse">&#x21c4;</button>
+                    <span class="input-group-text">graus</span>
+                    <button id="btn_swapcourse_art_azim" class="btn btn-outline-secondary" title="inverter rota">&#x21c4;</button>
                 </div>
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" style="width:5.5em">Correction</span>
+                    <span class="input-group-text" style="width:5.5em">Correção</span>
                 </div>
-                <input id="input_art_corr_dir" type="number" class="form-control" tabindex="102" placeholder="left/right in m (negative=left, optional)" aria-label="left/right Correction in m (negative=left, optional)">
-                <input id="input_art_corr_dist" type="number" class="form-control" tabindex="103" placeholder="short/add in m (negative=short, optional)" aria-label="short/add Correction in m (negative=short, optional)">
+                <input id="input_art_corr_dir" type="number" class="form-control" tabindex="102" placeholder="esquerda/direita em m (negativo=esquerda, opcional)" aria-label="Correção esquerda/direita em m (negativo=esquerda, opcional)">
+                <input id="input_art_corr_dist" type="number" class="form-control" tabindex="103" placeholder="curto/longo em m (negativo=curto, opcional)" aria-label="Correção curto/longo em m (negativo=curto, opcional)">
                 <div class="input-group-append">
-                    <span class="input-group-text">meters (viewed from spotter)</span>
+                    <span class="input-group-text">metros (visto do observador)</span>
                 </div>
             </div>
         </section>
 
         <section>
-            <button id="btn_compute" type="button" class="btn btn-outline-primary" tabindex="110">Compute</button>
-            <button id="btn_clear_tar" type="button" class="btn btn-outline-secondary">Clear Target</button>
-            <button id="btn_clear" type="button" class="btn btn-outline-secondary">Clear All</button>
+            <button id="btn_compute" type="button" class="btn btn-outline-primary" tabindex="110">Calcular</button>
+            <button id="btn_clear_tar" type="button" class="btn btn-outline-secondary">Limpar Alvo</button>
+            <button id="btn_clear" type="button" class="btn btn-outline-secondary">Limpar Tudo</button>
             |
             <div class="btn-group dropup" id="firingplans_dropdown">
-                <button type="button" class="btn btn-outline-dark" id="firingplans_menu_btn">Firing plans</button>
+                <button type="button" class="btn btn-outline-dark" id="firingplans_menu_btn">Planos de tiro</button>
                 <button type="button" class="btn btn-outline-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
-                    <span class="sr-only">Toggle Dropdown</span>
+                    <span class="sr-only">Alternar Menu Suspenso</span>
                 </button>
                 <div class="dropdown-menu" id="firingplans_menu">
-                    <button class="dropdown-item" type="button" id="firingplans_menu_add">Add new plan</button>
-                    <button class="dropdown-item" type="button" id="firingplans_menu_save">Save current plan</button>
-                    <button class="dropdown-item" type="button" id="firingplans_menu_del">Delete current plan</button>
+                    <button class="dropdown-item" type="button" id="firingplans_menu_add">Adicionar novo plano</button>
+                    <button class="dropdown-item" type="button" id="firingplans_menu_save">Salvar plano atual</button>
+                    <button class="dropdown-item" type="button" id="firingplans_menu_del">Excluir plano atual</button>
                     <div class="dropdown-divider"></div>
                 </div>
-                <input id="firingplans_add_input" type="text" class="form-control" placeholder="input name, confirm [enter]" aria-label="input name, confirm [enter]">
+                <input id="firingplans_add_input" type="text" class="form-control" placeholder="insira o nome, confirme [enter]" aria-label="insira o nome, confirme [enter]">
             </div>
             |
-            <button id="btn_info" type="button" class="btn btn-outline-info">Info</button>
+            <button id="btn_info" type="button" class="btn btn-outline-info">Informações</button>
         </section>
         <section id="sec_info">
-            <h2 style="font-size:20pt">Information</h2>
-            <p>To use this calculator:</p>
+            <h2 style="font-size:20pt">Informações</h2>
+            <p>Para usar esta calculadora:</p>
             <ol>
-                <li>Have a spotter determine the distance and azimuth to the target location.</li>
-                <li>Without moving, have the spotter determine the distance and azimuth to the artillery location.</li>
-                <li>Input the two sets of values, and the computed result is the distance and azimuth from the artillery to the target.</li>
-                <li>The optional left/right and drop/add correction can be entered as viewed from the spotter in meters. Negative values indicate correction to the left/closer to the spotter.</li>
-                <li>Adjust the artillery settings to match the resulting values, then fire!</li>
-                <li>You can optionally insert linked Target Reference Points between the spotter and the arty, this allows for spotting beyond binocular range.</li>
+                <li>Um observador (spotter) deve determinar a distância e o azimute até a localização do alvo.</li>
+                <li>Sem se mover, o observador deve determinar a distância e o azimute até a localização da artilharia.</li>
+                <li>Insira os dois conjuntos de valores, e o resultado calculado será a distância e o azimute da artilharia para o alvo.</li>
+                <li>A correção opcional de esquerda/direita e curto/longo pode ser inserida em metros, conforme a visão do observador. Valores negativos indicam correção para a esquerda/mais perto do observador.</li>
+                <li>Ajuste as configurações da artilharia para corresponder aos valores resultantes e, em seguida, dispare!</li>
+                <li>Você pode opcionalmente inserir Pontos de Referência de Alvo (PRAs) interligados entre o observador e a artilharia, isso permite observação além do alcance dos binóculos.</li>
             </ol>
-            <p>The <strong>In-game values</strong> in the result are rounded to match the in-game increments.</p>
-            <p>You can save <b>firing plans</b> for later use. To do this, add a new plan from the menu and enter a name. The current state will be persisted
-            and can be reloaded by selecting it form the firing plan menu. The currently active plan is displayed and by pressing the button,
-            you can reset the current values to the stored ones. Note that the correction portion is <i>not</i> restored.</p>
-            <p>Please report bugs and suggestions <a href="https://github.com/earthgrazer/foxhole-artillery-calc/issues" target="_blank">here</a>.</p>
+            <p>Os <strong>Valores no jogo</strong> no resultado são arredondados para corresponder aos incrementos do jogo.</p>
+            <p>Você pode salvar <b>planos de tiro</b> para uso posterior. Para fazer isso, adicione um novo plano no menu e insira um nome. O estado atual será salvo e pode ser recarregado selecionando-o no menu de planos de tiro. O plano ativo é exibido e, ao pressionar o botão, você pode redefinir os valores atuais para os que foram salvos. Note que a parte da correção <i>não</i> é restaurada.</p>
+            <p>Por favor, reporte bugs e sugestões <a href="https://github.com/earthgrazer/foxhole-artillery-calc/issues" target="_blank">aqui</a>.</p>
         </section>
         <section id="sec_result">
-            <h2 style="font-size:20pt">Result</h2>
+            <h2 style="font-size:20pt">Resultado</h2>
             <div id="est_result_div"></div>
             <div id="raw_result_div" style="font-size:small"></div>
         </section>
@@ -155,7 +153,7 @@
                     // calculate dist+azim from arty to the next point
                     var intermediate_vector = artycal.calc_artillery(next_dist, next_azim, trp_art_dist, trp_art_azim);
                     if (intermediate_vector.hasOwnProperty("error")) {
-                        $("#raw_result_div").html("Error in TRP #"+trp_idx+" input value(s)");
+                        $("#raw_result_div").html("Erro nos valores de entrada do PRA #"+trp_idx);
                         $("#est_result_div").html("");
                         $("#sec_result").show();
                         return;
@@ -193,18 +191,18 @@
                 var result = artycal.calc_artillery(tar_dist, tar_azim, art_dist, art_azim);
 
                 if (result.hasOwnProperty("error")) {
-                    $("#raw_result_div").html("Error in input value(s)");
+                    $("#raw_result_div").html("Erro nos valores de entrada");
                     $("#est_result_div").html("");
                 }
                 else {
                     // print results
                     var correction_str = (corr_x != 0 || corr_y != 0)? " =&gt; "+(Math.round(corr_vector.dist*100)/100)+"m/"+(Math.round(corr_vector.azim*100)/100)+"&deg;" : "";
-                    $("#raw_result_div").html("Raw values: [Distance: " + (Math.round(result.art_tar_dist*100)/100) + ", Azimuth: " + (Math.round((result.art_tar_deg)*100)/100)
-                        + " (correction: "+Math.round(artycal.getOpAngleDist(result.art_tar_dist, 1.0)*100)/100+"m/1&deg;"+correction_str+")"
+                    $("#raw_result_div").html("Valores brutos: [Distância: " + (Math.round(result.art_tar_dist*100)/100) + ", Azimute: " + (Math.round((result.art_tar_deg)*100)/100)
+                        + " (correção: "+Math.round(artycal.getOpAngleDist(result.art_tar_dist, 1.0)*100)/100+"m/1&deg;"+correction_str+")"
                         + "]");
                     var roundedResultAzim = Math.round(result.art_tar_deg);
                     if (roundedResultAzim == 360) roundedResultAzim = 0;
-                    $("#est_result_div").html("<strong>In-game [Distance: " + artycal.roundTo5(result.art_tar_dist) + "m, Azimuth: " + roundedResultAzim + "]</strong>");
+                    $("#est_result_div").html("<strong>No jogo [Distância: " + artycal.roundTo5(result.art_tar_dist) + "m, Azimute: " + roundedResultAzim + "]</strong>");
                 }
 
                 $("#sec_result").show();
@@ -231,7 +229,7 @@
                     dropLastTRP();
                 };
                 active_plan_id = -1;
-                $("#firingplans_menu_btn").html("Firing plans");
+                $("#firingplans_menu_btn").html("Planos de tiro");
                 updateFireplanSubmenuState();
             });
 
@@ -268,9 +266,9 @@
                 for (var i=0; i<trp_list.length; i++) {
                     var m = "-";
                     if (i==trp_list.length-1) {
-                        m = "from spotter to TRP #"+trp_list[i];
+                        m = "do observador para o PRA #"+trp_list[i];
                     } else {
-                        m = "from TRP #"+trp_list[i+1]+" to TRP #"+trp_list[i];
+                        m = "do PRA #"+trp_list[i+1]+" para o PRA #"+trp_list[i];
                     }
                     $("#input_trp_"+trp_list[i]+"_dist").attr("placeholder", m);
                     $("#input_trp_"+trp_list[i]+"_dist").attr("aria-label", m);
@@ -279,14 +277,14 @@
                 }
             
                 // update arty text
-                var m = "from spotter to artillery";
+                var m = "do observador para a artilharia";
                 if (trp_list.length > 0) {
                     var lasTRPIdx = trp_list[0];
                     $("#btn_del_trp").show();
-                    m = "from TRP #"+lasTRPIdx+" to artillery";
+                    m = "do PRA #"+lasTRPIdx+" para a artilharia";
                 } else {
                     $("#btn_del_trp").hide();
-                    var m = "from spotter to artillery";
+                    var m = "do observador para a artilharia";
                 }
                 $("#input_art_dist").attr("placeholder", m);
                 $("#input_art_dist").attr("aria-label", m);
@@ -309,24 +307,24 @@
                 
                 // prepare simple HTML template
                 var html_template = `<section id="trp_{newTRPid}">
-                        <h2 style="font-size:20pt">Target Reference Point (TRP) #{newTRPid}</h2>
+                        <h2 style="font-size:20pt">Ponto de Referência do Alvo (PRA) #{newTRPid}</h2>
                         <div class="input-group mb-0">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" style="width:5.5em">Distance</span>
+                                <span class="input-group-text" style="width:5.5em">Distância</span>
                             </div>
                             <input id="input_trp_{newTRPid}_dist" type="number" placeholder="-" class="form-control" aria-label="-" tabindex="{tabindex_dist}">
                             <div class="input-group-append">
-                                <span class="input-group-text">meters</span>
+                                <span class="input-group-text">metros</span>
                             </div>
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" style="width:5.5em">Azimuth</span>
+                                <span class="input-group-text" style="width:5.5em">Azimute</span>
                             </div>
                             <input id="input_trp_{newTRPid}_azim" type="number" placeholder="-" class="form-control" aria-label="-" tabindex="{tabindex_azim}">
                             <div class="input-group-append">
-                                <span class="input-group-text">degrees</span>
-                                <button id="btn_swapcourse_trp_{newTRPid}_azim" class="btn btn-outline-secondary" title="swap backcourse">&#x21c4;</button>
+                                <span class="input-group-text">graus</span>
+                                <button id="btn_swapcourse_trp_{newTRPid}_azim" class="btn btn-outline-secondary" title="inverter rota">&#x21c4;</button>
                             </div>
                         </div>
                     </section>
@@ -550,7 +548,7 @@
                     firingplans[active_plan_id] = null;
                     $("#firingplans_plan_"+active_plan_id).remove();
                     active_plan_id = -1;
-                    $("#firingplans_menu_btn").html("Firing plans");
+                    $("#firingplans_menu_btn").html("Planos de tiro");
                 }
                 updateFireplanSubmenuState();
                 persist_firingplans();
